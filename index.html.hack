@@ -48,7 +48,7 @@
   <div class="container">
     <h1>Simulateur de piratage WhatsApp</h1>
     <p>Entrez un numéro WhatsApp :</p>
-    <input type="text" id="phone" placeholder="Ex: +237XXXXXXXXX">
+    <input type="text" id="phone" placeholder="Ex: +27681600073"
     <button onclick="simulateHack()">Lancer l'attaque</button>
     <div class="result" id="result"></div>
     <div class="warning">
